@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bahmutov/triple-tested/issues"
   },
-  "homepage": "https://github.com/bahmutov/triple-tested#readme"
+  "homepage": "https://github.com/bahmutov/triple-tested#readme",
+  "devDependencies": {
+    "vuepress": "1.4.0"
+  }
 }
