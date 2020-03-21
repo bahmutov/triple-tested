@@ -16,3 +16,8 @@ jobs:
       - run: echo "gh-pages 📑 built successfully ✅"
       - name: show deployed page
         run: curl -s https://glebbahmutov.com/triple-tested/
+
+      - uses: cypress-io/github-action@v1
+        name: test deployed site
+        with:
+          config: baseUrl=https://glebbahmutov.com/triple-tested/
