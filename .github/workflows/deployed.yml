@@ -1,17 +1,18 @@
 name: deployed
-on: [status, page_build]
+on: status
 jobs:
-  test:
+  # show-event:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Dump GitHub context
+  #       env:
+  #         GITHUB_CONTEXT: ${{ toJson(github) }}
+  #       run: echo "$GITHUB_CONTEXT"
+
+  test-deployed-page:
+    if: github.event.context == 'github/pages' && github.event.state == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-
+      - run: echo "gh-pages 📑 built successfully ✅"
       - name: show deployed page
-        if: github.event.context == 'github/pages' && github.event.state == 'success'
-        run: |
-          echo "gh-pages 📑 built successfully ✅"
-          echo "showing the currently deployed page"
-          curl -s https://glebbahmutov.com/triple-tested/
+        run: curl -s https://glebbahmutov.com/triple-tested/
