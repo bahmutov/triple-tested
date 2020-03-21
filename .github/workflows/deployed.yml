@@ -1,5 +1,5 @@
 name: deployed
-on: [status, deployment, deployment_status]
+on: status
 jobs:
   test:
     runs-on: ubuntu-latest
