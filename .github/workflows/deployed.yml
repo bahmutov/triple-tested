@@ -1,15 +1,15 @@
 name: deployed
-on: status
+on: [status, page_build]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      # - name: Dump GitHub context
-      #   env:
-      #     GITHUB_CONTEXT: ${{ toJson(github) }}
-      #   run: echo "$GITHUB_CONTEXT"
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 
-      - name: check if built
+      - name: show deployed page
         if: github.event.context == 'github/pages' && github.event.state == 'success'
         run: |
           echo "gh-pages 📑 built successfully ✅"
