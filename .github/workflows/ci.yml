@@ -16,7 +16,7 @@ jobs:
         name: test local dev site
         with:
           build: 'npm run docs:build'
-          start: 'npm run docs:dev',
+          start: 'npm run docs:dev'
           wait-on: 'http://localhost:8080/triple-tested/'
 
       # https://github.com/marketplace/actions/github-pages-action
