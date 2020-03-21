@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check if built
-        if: ${{ github.context == "github/pages" && github.state == "success" }}
+        if: ${{ github.context == 'github/pages' && github.state == 'success' }}
         run: |
           echo "gh-pages 📑 built successfully ✅"
           curl https://glebbahmutov.com/triple-tested/
