@@ -13,4 +13,5 @@ jobs:
         if: github.event.context == 'github/pages' && github.event.state == 'success'
         run: |
           echo "gh-pages 📑 built successfully ✅"
-          curl https://glebbahmutov.com/triple-tested/
+          echo "showing the currently deployed page"
+          curl -s https://glebbahmutov.com/triple-tested/
