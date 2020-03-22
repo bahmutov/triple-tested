@@ -2,6 +2,7 @@
   "name": "triple-tested",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,8 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/bahmutov/triple-tested.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cypress", "github-actions", "github-pages", "example"],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bahmutov/triple-tested/issues"
