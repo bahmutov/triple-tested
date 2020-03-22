@@ -16,7 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/bahmutov/triple-tested.git"
   },
-  "keywords": ["cypress", "github-actions", "github-pages", "example"],
+  "keywords": [
+    "cypress",
+    "github-actions",
+    "github-pages",
+    "example"
+  ],
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -25,6 +30,7 @@
   "homepage": "https://github.com/bahmutov/triple-tested#readme",
   "devDependencies": {
     "cypress": "4.2.0",
+    "serve": "11.3.0",
     "start-server-and-test": "1.10.11",
     "vuepress": "1.4.0"
   }
