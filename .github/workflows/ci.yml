@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: Install and test 📦✅
-        uses: cypress/github-action@v1
+        uses: cypress-io/github-action@v1
         with:
           start: 'npm run docs:develop'
           wait-on: 'http://localhost:8080'
