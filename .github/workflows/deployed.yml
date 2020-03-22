@@ -15,15 +15,15 @@ jobs:
     steps:
       - run: echo "gh-pages 📑 built successfully ✅"
       - name: show deployed page
-        run: curl -s https://glebbahmutov.com/triple-tested/
+        run: curl -s https://glebbahmutov.com/
 
       # we need our source code that has package.json and Cypress specs
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
+      # - name: Checkout 🛎️
+      #   uses: actions/checkout@v2
+      #   with:
+      #     persist-credentials: false
 
-      - uses: cypress-io/github-action@v1
-        name: test deployed site
-        with:
-          config: baseUrl=https://glebbahmutov.com/triple-tested/
+      # - uses: cypress-io/github-action@v1
+      #   name: test deployed site
+      #   with:
+      #     config: baseUrl=https://glebbahmutov.com/triple-tested/

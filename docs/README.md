@@ -1,6 +1,8 @@
-# Hello VuePress
+# Main page
 > This is an experiment
 
 - does it work?
 - maybe
-- hope so!!
+- hope so!
+
+Go to [about page](./about)
