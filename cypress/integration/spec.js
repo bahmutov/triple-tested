@@ -10,4 +10,18 @@ describe('Triple tested', () => {
     cy.contains('a', 'main page').click()
     cy.url().should('not.match', /about/)
   })
+
+  it('finds About page using search', () => {
+    cy.visit('/')
+    cy.get('.search-box input').type('about')
+    // suggestions list appears
+    cy.get('.suggestions li').should('be.visible')
+      // and should have at least 1 item
+      .and('have.length.gte', 1)
+      // and the first search result is our "About" page
+      .first()
+      .contains('.page-title', 'About').click()
+    // check we are on the right page
+    cy.title().should('contain', 'About')
+  })
 })
