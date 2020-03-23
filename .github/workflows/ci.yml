@@ -18,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           start: 'npm run docs:dev'
-          wait-on: 'http://localhost:8080'
+          wait-on: 'http://localhost:8080/triple-tested'
 
       - name: Build site 🏗
         run: npm run docs:build

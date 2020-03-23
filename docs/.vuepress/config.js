@@ -1,4 +1,5 @@
 module.exports = {
   title: 'Triple Tested',
-  description: 'Example static site'
+  description: 'Example static site',
+  base: '/triple-tested'
 }
