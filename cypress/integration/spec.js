@@ -9,6 +9,7 @@ describe('Triple tested', () => {
     cy.contains('h1', 'About')
     cy.contains('a', 'main page').click()
     cy.url().should('not.match', /about/)
+    // only our Main page has <h1>Main page</h1>
     cy.contains('h1', 'Main page')
   })
 

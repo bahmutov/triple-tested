@@ -1,5 +1,8 @@
 name: deployed
-on: status
+on:
+  status:
+    branches:
+      - master
 jobs:
   # show-event:
   #   runs-on: ubuntu-latest
