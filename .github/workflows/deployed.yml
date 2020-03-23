@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: echo "gh-pages 📑 built successfully ✅"
       - name: show deployed page
-        run: curl -s https://glebbahmutov.com/triple-tested
+        run: curl -s https://glebbahmutov.com/triple-tested/
 
       # we need our source code that has package.json and Cypress specs
       # - name: Checkout 🛎️
