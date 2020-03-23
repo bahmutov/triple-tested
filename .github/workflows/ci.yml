@@ -30,4 +30,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
           # use the same commit message for `gh-pages` branch
+          # TODO: this does not seem to work, the commit messages are always "deployed"
           commit_message: ${{ github.event.head_commit.message }}
