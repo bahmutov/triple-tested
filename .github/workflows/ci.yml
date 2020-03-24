@@ -35,8 +35,7 @@ jobs:
           install: false
           start: 'npx serve output'
           wait-on: 'http://localhost:5000/triple-tested/'
-          with:
-            config: baseUrl=http://localhost:5000/triple-tested/
+          config: baseUrl=http://localhost:5000/triple-tested/
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Deploy 🚀
