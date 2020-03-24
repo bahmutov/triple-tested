@@ -44,8 +44,8 @@ jobs:
           config: baseUrl=http://localhost:5000/triple-tested/
           record: true
           group: 'production bundle'
-          env:
-            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Deploy 🚀
