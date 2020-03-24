@@ -14,6 +14,7 @@ jobs:
         with:
           persist-credentials: false
 
+      # https://github.com/cypress-io/github-action
       - name: Install and test 📦✅
         uses: cypress-io/github-action@v1
         with:

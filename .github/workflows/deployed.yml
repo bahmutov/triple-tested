@@ -18,6 +18,7 @@ jobs:
         with:
           persist-credentials: false
 
+      # https://github.com/cypress-io/github-action
       - uses: cypress-io/github-action@v1
         name: test deployed site
         with:

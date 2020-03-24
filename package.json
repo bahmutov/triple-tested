@@ -1,7 +1,7 @@
 {
   "name": "triple-tested",
   "version": "1.0.0",
-  "description": "",
+  "description": "Deploying to GitHub Pages using GitHub Actions and triple testing it with Cypress",
   "private": true,
   "main": "index.js",
   "scripts": {
