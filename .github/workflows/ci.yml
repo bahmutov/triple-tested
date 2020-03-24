@@ -23,6 +23,21 @@ jobs:
       - name: Build site 🏗
         run: npm run docs:build
 
+      - name: Prepare built site for testing 🚛
+        run: |
+          mkdir output
+          cp -r ./docs/.vuepress/dist output/triple-tested
+
+      - name: Test production site ✅
+        uses: cypress-io/github-action@v1
+        with:
+          # we have already installed all dependencies above
+          install: false
+          start: 'npx serve output'
+          wait-on: 'http://localhost:5000/triple-tested/'
+          with:
+            config: baseUrl=http://localhost:5000/triple-tested/
+
       # https://github.com/marketplace/actions/github-pages-action
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3

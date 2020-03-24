@@ -5,4 +5,4 @@
 - maybe
 - hope so!
 
-Go to [about page](./about)
+Go to [about page](./about.md)
