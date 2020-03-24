@@ -23,7 +23,8 @@ jobs:
       # https://github.com/cypress-io/github-action
       - uses: cypress-io/github-action@v1
         name: test deployed site
-        record: true
-        tag: 'production'
-      env:
-        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        with:
+          record: true
+          tag: 'production'
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
