@@ -20,6 +20,11 @@ jobs:
         with:
           start: 'npm run docs:dev'
           wait-on: 'http://localhost:8080/triple-tested/'
+          record: true
+          group: 'development'
+          tag: 'ci'
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Build site 🏗
         run: npm run docs:build
@@ -37,6 +42,10 @@ jobs:
           start: 'npx serve output'
           wait-on: 'http://localhost:5000/triple-tested/'
           config: baseUrl=http://localhost:5000/triple-tested/
+          record: true
+          group: 'production bundle'
+          env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Deploy 🚀
