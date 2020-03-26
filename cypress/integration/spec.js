@@ -13,7 +13,7 @@ describe('Triple tested', () => {
     cy.contains('h1', 'Main page')
   })
 
-  it('finds About page using search', () => {
+  it.skip('finds About page using built-in search', () => {
     cy.visit('/')
     cy.get('.search-box input').type('about')
     // suggestions list appears
@@ -23,6 +23,16 @@ describe('Triple tested', () => {
       // and the first search result is our "About" page
       .first()
       .contains('.page-title', 'About').click()
+    // check we are on the right page
+    cy.title().should('contain', 'About')
+  })
+
+  it('finds About page using Algolia search widget', () => {
+    cy.visit('/')
+    cy.get('.search-box input').type('about')
+    // suggestions list appears
+    cy.contains('.algolia-docsearch-suggestion--title', 'About').should('be.visible')
+      .click()
     // check we are on the right page
     cy.title().should('contain', 'About')
   })
